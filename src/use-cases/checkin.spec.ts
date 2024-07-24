@@ -21,8 +21,8 @@ describe("Check in Use Case", () => {
       title: "Academia 01",
       phone: "",
       description: "",
-      latitude: new Decimal(0),
-      longitude: new Decimal(0),
+      latitude: new Decimal(-23.5664307),
+      longitude: new Decimal(-46.6026496),
     });
     vi.useFakeTimers(); //MOCKING THE TIME
   });
