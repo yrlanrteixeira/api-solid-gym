@@ -13,7 +13,7 @@ describe("Gym Use Case", () => {
 
   it("should be able to create gym", async () => {
     const { gym } = await sut.execute({
-      title: "John Doe",
+      title: "Academia 01",
       description: null,
       phone: null,
       latitude: -23.5664307,
