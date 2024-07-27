@@ -30,11 +30,13 @@
     "vitest": "2.0.2"
   },
   "dependencies": {
+    "@fastify/jwt": "8.0.1",
     "@prisma/client": "5.16.2",
     "bcryptjs": "2.4.3",
     "dayjs": "1.11.11",
     "dotenv": "16.4.5",
     "fastify": "^4.28.1",
+    "fastify-jwt": "4.2.0",
     "zod": "3.23.8"
   }
 }
