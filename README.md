@@ -186,12 +186,6 @@ Se você tem uma sugestão que tornaria isso melhor, por favor faça um fork do 
 
 <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
 
-## Licença
-
-Distribuído sob a licença MIT. Veja `LICENSE.txt` para mais informações.
-
-<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
-
 ## Contato
 
 Yrlan Teixeira
