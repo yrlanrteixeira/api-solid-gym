@@ -42,6 +42,6 @@ describe("Check-in Metrics (e2e)", () => {
     const response = await request(app.server).get(`/check-ins/metrics`).set("Authorization", `Bearer ${token}`).send();
 
     expect(response.statusCode).toEqual(201);
-    expect(response.body.checkInsCount).toEqual(18);
+    expect(response.body.checkInsCount).toEqual(2);
   });
 });

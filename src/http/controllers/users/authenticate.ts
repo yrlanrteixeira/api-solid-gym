@@ -26,9 +26,25 @@ export async function authenticate(request: FastifyRequest, reply: FastifyReply)
       }
     );
 
-    return reply.status(200).send({
-      token,
-    });
+    const refreshToken = await reply.jwtSign(
+      {},
+      {
+        sub: user.id,
+        expiresIn: "7d",
+      }
+    );
+
+    return reply
+      .setCookie("refresh_token", refreshToken, {
+        path: "/",
+        secure: true,
+        sameSite: true,
+        httpOnly: true, // This is important to prevent XSS attacks
+      })
+      .status(200)
+      .send({
+        token,
+      });
   } catch (err) {
     if (err instanceof InvalidCredentialsError) {
       return reply.status(400).send({ message: err.message });

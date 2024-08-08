@@ -40,11 +40,11 @@ describe("Validate Check-in (e2e)", () => {
 
     expect(response.statusCode).toEqual(204);
 
-    checkIn = await prisma.checkIn.findUnique({
+    checkIn = (await prisma.checkIn.findUnique({
       where: {
         id: checkIn.id,
       },
-    });
+    })) as any;
 
     expect(checkIn.validated_at).toEqual(expect.any(Date));
   });

@@ -24,9 +24,12 @@ export default <Environment>{
 
     process.env.DATABASE_URL = dataBaseURL;
 
+    execSync("npx prisma migrate deploy");
+
     return {
       async teardown() {
         await prisma.$executeRawUnsafe(`DROP SCHEMA IF EXISTS "${schema}" CASCADE`);
+
         await prisma.$disconnect();
       },
     };
